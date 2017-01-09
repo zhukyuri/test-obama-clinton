@@ -1,0 +1,12 @@
+- var env = htmlWebpackPlugin.options.env;
+
+doctype html
+html
+  head
+    title Test Obama - Clinton
+    - if (env === 'production')
+      link(rel='stylesheet' href='style.css')
+  body
+    div#root!= markup
+    - if (env === 'production')
+      script(src='app.js')
